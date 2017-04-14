@@ -18,10 +18,9 @@ if (process.env.NODE_ENV === 'docker') {
     .build()
 }
 
-
 describe('todo app', () => {
   before(function () {
-    this.timeout(10000)
+    this.timeout(50000)
     return driver.navigate().to(process.env.WEB_URL || 'http://localhost')
   })
 
