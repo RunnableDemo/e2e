@@ -3,13 +3,21 @@ const By = webdriver.By
 const until = webdriver.until
 const Key = webdriver.Key
 
-const chai = require('chai');
-const expect = chai.expect;
+const chai = require('chai')
+const expect = chai.expect
+let driver
 
-const driver = new webdriver.Builder()
-  .usingServer('http://chrome:4444/wd/hub/')
-  .forBrowser('chrome')
-  .build()
+if (process.env.NODE_ENV === 'docker') {
+  driver = new webdriver.Builder()
+    .usingServer('http://chrome:4444/wd/hub/')
+    .forBrowser('chrome')
+    .build()
+} else {
+  driver = new webdriver.Builder()
+    .forBrowser('chrome')
+    .build()
+}
+
 
 describe('todo app', () => {
   before(function () {
