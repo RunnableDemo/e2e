@@ -1,0 +1,30 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "description": "e2e Tests for ToDo application",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "selenium-webdriver": "^3.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DockerCon2017/e2e.git"
+  },
+  "author": "Runnable, Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DockerCon2017/e2e/issues"
+  },
+  "homepage": "https://github.com/DockerCon2017/e2e#readme"
+}
