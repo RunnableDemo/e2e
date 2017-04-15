@@ -22,7 +22,6 @@ RUN npm install
 
 # Add Repository & Build
 ADD . /app/
-RUN chmod +x wait-for-it.sh
 
 # Expose Ports & Run Application
 EXPOSE 80
